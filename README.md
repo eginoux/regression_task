@@ -2,7 +2,7 @@
 This repository contains a Jupyter Notebook that demonstrates the process of performing a regression task using linear regression. 
 Linear regression is a fundamental technique in the field of data science that allows us to model and predict relationships between variables. 
 
-This project is a part of the FreeCodeCamp challenges from the [Machine Learning with Python]([url](https://www.freecodecamp.org/learn/machine-learning-with-python/)) course.
+This project is a part of the FreeCodeCamp challenges from the Machine Learning with Python course: https://www.freecodecamp.org/learn/machine-learning-with-python
 
 ## Introduction
 In this project, we explore the concept of linear regression and its application to a real-world dataset. 
