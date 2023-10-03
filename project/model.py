@@ -28,18 +28,29 @@ def train_model():
     y_pred = model.predict(X_test_preproc)
     score = mean_absolute_error(y_test, y_pred)
     print(f"Model is well trained with a {round(score, 2)} score")
-
+    # Save model
     return model
 
-def predict():
+def make_prediction():
     """
     Takes data and out a prediction
     """
-    data = ({"age": [57],
-        "sex": ["female"],
-        "bmi": [22.7],
-        "children": [2],
-        "smoker": ["no"],
-        "region": ["northeast"]})
+    age = int(input("Enter age of client: "))
+    sex = input("Enter sex of client: [male/female]")
+    bmi = int(input("Enter BMI of client: [XX.X]"))
+    children = int(input("Enter number of childrens: "))
+    smoker = input("Is client a smoker? [yes / no]")
+    region = input("Enter client's region: ")
+    data = ({"age": [age],
+        "sex": [sex],
+        "bmi": [bmi],
+        "children": [children],
+        "smoker": [smoker],
+        "region": [region]})
     X_new = pd.DataFrame(data = data)
-    X_new
+
+    model = # Get saved model
+    X_new_preproc = transform_X(X_new)
+    prediction = model.predict(X_new_preproc)
+
+    print(f"Healthcare costs prediction is: {round(prediction[0], 2)}$")
