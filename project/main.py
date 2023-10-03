@@ -2,7 +2,6 @@ import pandas as pd
 
 from project.preprocessor import transform_X
 from project.model import train_model
-from project.model import train_model
 
 
 def make_prediction():
