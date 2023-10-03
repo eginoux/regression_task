@@ -5,6 +5,7 @@ from sklearn.preprocessing import RobustScaler, OneHotEncoder
 from project.params import *
 from project.data import get_X_train_etc
 
+
 def get_preproc_pipeline():
     """
     Create and return preprocessing pipeline
@@ -16,6 +17,7 @@ def get_preproc_pipeline():
 
     return preproc_pipeline
 
+
 def fit_preproc_pipeline():
     """
     Fit preprocessing pipeline
@@ -25,6 +27,7 @@ def fit_preproc_pipeline():
     preproc_pipeline.fit(X_train)
 
     return preproc_pipeline
+
 
 def transform_X(X):
     """

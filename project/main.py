@@ -7,7 +7,10 @@ from project.model import train_model
 
 def make_prediction():
     """
-    Takes data and out a prediction
+    - Asks for input data
+    - Creates a data frame
+    - Preprocess data
+    - Makes a prediction
     """
     model = train_model()
     age = int(input("Enter age of client: "))
