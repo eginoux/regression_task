@@ -1,19 +1,8 @@
 import pandas as pd
-import pickle
 
-from project.data import get_X_train_etc
 from project.preprocessor import transform_X
-from project.model import initialize_model, train_model
 from project.model import train_model
-
-
-# def main():
-#     X_train, X_test, y_train, y_test = get_X_train_etc()
-#     X_train_preproc = transform_X(X_train)
-#     X_test_preproc = transform_X(X_test)
-#     model = train_model()
-
-#     return model
+from project.model import train_model
 
 
 def make_prediction():

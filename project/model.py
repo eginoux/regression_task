@@ -1,6 +1,5 @@
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_absolute_error
-import pickle
 
 from project.data import get_X_train_etc
 from project.preprocessor import transform_X
