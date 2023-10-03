@@ -21,14 +21,14 @@ def get_X_y():
 
     return X, y
 
-def get_X_train_etc(X, y, test_size = 0.2, random_state = 1):
+def get_X_train_etc():
     """
     Get X_train, X_test, y_train & y_test
     """
     X, y = get_X_y()
     X_train, X_test, y_train, y_test = train_test_split(X,
                                                         y,
-                                                        test_size=test_size,
-                                                        random_state=random_state)
+                                                        test_size=0.2,
+                                                        random_state=1)
 
     return X_train, X_test, y_train, y_test
