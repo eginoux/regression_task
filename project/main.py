@@ -13,11 +13,28 @@ def make_prediction():
     """
     model = train_model()
     age = int(input("Enter age of client: "))
+    while age not in [i for i in range(18, 100)]:
+        age = int(input("Enter a valid age between 18 and 99: "))
     sex = input("Enter sex of client [male/female]: ")
+    while sex not in ["male", "female"]:
+        sex = input("Enter a valid sex [male/female]: ")
     bmi = float(input("Enter BMI of client [XX.X]: "))
-    children = int(input("Enter number of childrens: "))
+    while bmi not in [i for i in range(10, 50)]:
+        bmi = float(input("Enter a valid BMI [XX.X]: "))
+    children = input("Enter a numeric number of childrens: ")
+    while children.isdigit() == False:
+        children = input("Enter a numeric value for children(s): ")
+    children = int(children)
+    while (children not in [i for i in range(0, 15)]):
+        children = int(input("Enter a valid number of childrens: "))
     smoker = input("Is client a smoker? [yes / no] ")
+    while smoker not in ["yes", "no"]:
+        smoker = input("Enter a valid attribute [yes / no]: ")
     region = input("Enter client's region: ")
+    while not region in ["northeast", "southeast", "northwest", "southwest"]:
+        print("Accepted regions are northeast, southeast, northwest, southwest")
+        region = input("Enter a valid region: ")
+
     data = ({"age": [age],
         "sex": [sex],
         "bmi": [bmi],
